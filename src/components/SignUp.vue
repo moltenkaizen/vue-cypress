@@ -7,14 +7,14 @@
             <div class="field">
               <label class="label">Name</label>
               <div class="control">
-                <input class="input" v-model="form.name" type="text" placeholder="Text input">
+                <input class="input" v-model="form.name" name="name" type="text" placeholder="Text input">
               </div>
             </div>
 
             <div class="field">
               <label class="label">Username</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="input is-success" v-model="form.username" type="text" placeholder="Text input">
+                <input class="input is-success" v-model="form.username" name="username" type="text" placeholder="Text input">
                 <span class="icon is-small is-left">
                   <font-awesome-icon icon="user"/>
                 </span>
@@ -51,9 +51,9 @@
               <label class="label">Subject</label>
               <div class="control">
                 <div class="select">
-                  <select v-model="form.subject">
-                    <option>Select dropdown</option>
-                    <option>With options</option>
+                  <select name="subject" v-model="form.subject">
+                    <option>Option 1</option>
+                    <option>Options 2</option>
                   </select>
                 </div>
               </div>
@@ -62,14 +62,14 @@
             <div class="field">
               <label class="label">Message</label>
               <div class="control">
-                <textarea v-model="form.message" class="textarea" placeholder="Textarea"></textarea>
+                <textarea v-model="form.message" name="message" class="textarea" placeholder="Textarea"></textarea>
               </div>
             </div>
 
             <div class="field">
               <div class="control">
                 <label class="checkbox">
-                  <input type="checkbox" v-model="form.tosAgree">
+                  <input type="checkbox" name="tos-agree" v-model="form.tosAgree">
                   I agree to the <a href="#">terms and conditions</a>
                 </label>
               </div>
@@ -90,22 +90,22 @@
             <p class="panel-heading">
               Form Data
             </p>
-            <p class="panel-block">
+            <p class="panel-block" data-cy="name">
               Name: {{ form.name }}
             </p>
-            <p class="panel-block">
+            <p class="panel-block" data-cy="username">
               Username: {{ form.username }}
             </p>
-            <p class="panel-block">
+            <p class="panel-block" data-cy="email">
               Email: {{ form.email }}
             </p>
-            <p class="panel-block">
+            <p class="panel-block" data-cy="subject">
               Subject: {{ form.subject }}
             </p>
-            <p class="panel-block">
+            <p class="panel-block" data-cy="message">
               Message: {{ form.message }}
             </p>
-            <p class="panel-block">
+            <p class="panel-block" data-cy="tos-agree">
               TOS Agreed: {{ form.tosAgree }}
             </p>
           </nav>
