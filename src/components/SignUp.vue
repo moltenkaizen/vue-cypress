@@ -14,8 +14,7 @@
             <div class="field">
               <label class="label">Username</label>
               <div class="control has-icons-left has-icons-right">
-                <input class="input is-success" v-model="form.username" type="text" placeholder="Text input"
-                       value="bulma">
+                <input class="input is-success" v-model="form.username" type="text" placeholder="Text input">
                 <span class="icon is-small is-left">
                   <font-awesome-icon icon="user"/>
                 </span>
@@ -32,10 +31,9 @@
                        name="email"
                        class="input"
                        :class="{'is-danger': errors.has('email')}"
-                       v-model.lazy="form.email"
+                       v-model="form.email"
                        type="email"
-                       placeholder="Email input"
-                       value="hello@">
+                       placeholder="Email input">
                 <span class="icon is-small is-left">
                   <font-awesome-icon icon="envelope"/>
                 </span>
@@ -46,7 +44,7 @@
                   <font-awesome-icon icon="check"/>
                 </span>
               </div>
-              <p v-show="errors.has('email')" class="help is-danger">This email is invalid</p>
+              <p v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</p>
             </div>
 
             <div class="field">
