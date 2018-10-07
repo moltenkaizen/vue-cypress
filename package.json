@@ -5,15 +5,28 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.4",
+    "@fortawesome/free-solid-svg-icons": "^5.3.1",
+    "@fortawesome/vue-fontawesome": "^0.1.1",
+    "bulma": "^0.7.1",
+    "i": "^0.3.6",
+    "npm": "^6.4.1",
+    "vee-validate": "^2.1.0-beta.9",
     "vue": "^2.5.17"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
+    "cypress": "^3.1.0",
+    "eslint-plugin-cypress": "^2.0.1",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
